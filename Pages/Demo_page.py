@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
+
 
 from Pages.Base_page import BasePage
 
@@ -37,4 +36,3 @@ class DemoPage(BasePage):
 
         super()._type(self.__insert_number, str(sum_of_numbers))
         super()._click(self.__demo_button)
-
