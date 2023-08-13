@@ -71,7 +71,7 @@ class BasePage:
         self._wait_until_element_is_visible(locator, time)
         return self._find(locator).text
 
-    def _resolve_captcha(self) -> str:
+    def _resolve_captcha(self, site_key: str) -> str:
         sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
         api_key = os.getenv('1abc234de56fab7c89012d34e56fa7b8', '59cf0add01e1fa16e946773a3f5bc079')
@@ -80,7 +80,7 @@ class BasePage:
 
         try:
             result = solver.recaptcha(
-                sitekey='6LdJtY8UAAAAADTgIWYnG_VKkfNqqB-w8CdQFL7Y',
+                sitekey=site_key,
                 url='https://phptravels.org/register.php')
             return str(result['code'])
         except Exception as e:
