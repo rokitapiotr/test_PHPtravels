@@ -71,17 +71,18 @@ class BasePage:
         self._wait_until_element_is_visible(locator, time)
         return self._find(locator).text
 
-    def _resolve_captcha(self, site_key: str) -> str:
+    def _resolve_captcha(self, site_key: str, url_str: str) -> str:
         sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-        api_key = os.getenv('1abc234de56fab7c89012d34e56fa7b8', '59cf0add01e1fa16e946773a3f5bc079')
+        api_key = os.getenv('1abc234de56fab7c89012d34e56fa7b8', 'dcb4b8fe00b2e43f5e02b2b19b3fbdbb')
 
         solver = TwoCaptcha(api_key)
 
         try:
             result = solver.recaptcha(
                 sitekey=site_key,
-                url='https://phptravels.org/register.php')
+                url=url_str
+            )
             return str(result['code'])
         except Exception as e:
             return str(e)

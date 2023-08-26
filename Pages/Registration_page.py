@@ -1,6 +1,6 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-from Pages.Base_page import BasePage
+from test_PHPtravels.Pages.Base_page import BasePage
 
 
 class RegistrationPage(BasePage):
@@ -74,7 +74,7 @@ class RegistrationPage(BasePage):
     def not_accepting_email_newsletter(self):
         super()._click(self.__newsletter_rejection)
 
-    def captcha(self, site_key: str):
-        captcha_token = self._resolve_captcha(site_key)
+    def captcha(self, site_key: str, url_str: str):
+        captcha_token = self._resolve_captcha(site_key, url_str)
         super()._set_captcha_response(captcha_token)
         super()._click(self.__register_button)

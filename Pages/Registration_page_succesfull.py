@@ -1,9 +1,10 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-from Pages.Base_page import BasePage
+from test_PHPtravels.Pages.Base_page import BasePage
 
 
 class RegisteredInSuccessfullyOnRegistrationPage(BasePage):
+
     _url = 'https://phptravels.org/clientarea.php'
     __header_locator = (By.XPATH, '/html/body/nav/div/ol/li[2]')
     __error_of_resending_email_message_locator = (By.XPATH, '/html/body/div[1]/div/div/div[2]/span')

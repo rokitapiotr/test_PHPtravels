@@ -1,12 +1,12 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-from Pages.Base_page import BasePage
+from test_PHPtravels.Pages.Base_page import BasePage
+
 
 class LoggedInSuccessfullyOnDemoPage(BasePage):
-
-    __header_locator = (By.XPATH, '//*[@id="content"]/section[1]/div/div/div[2]/div/div/div/h2')
-    __circle_locator = (By.XPATH, '//*[@id="content"]/section[1]/div/div/div[2]/div/div/div/div/div/div/div/div[3]/div/div')
-    __feedback_locator = (By.XPATH,'//*[@id="content"]/section[1]/div/div/div[2]/div/div/div/div/div/div/div/div[3]/p')
+    __header_locator = (By.XPATH, '/html/body/section[1]/div/div/div[2]/div/div/div/div/h2')
+    __picture_locator = (By.XPATH, '//*[@id="colored"]')
+    __feedback_locator = (By.XPATH, '/html/body/section[1]/div/div/div[2]/div/div/div/div/div/div/div/div[3]/p')
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
@@ -19,9 +19,6 @@ class LoggedInSuccessfullyOnDemoPage(BasePage):
     def feedback(self) -> str:
         return super()._get_text(self.__feedback_locator)
 
-    def is_circle_displayed(self) -> bool:
-        return super()._is_displayed(self.__circle_locator)
+    def is_picture_displayed(self) -> bool:
+        return super()._is_displayed(self.__picture_locator)
 
-### //*[@id="content"]/section[1]/div/div/div[2]/div/div/div/div/div/div/div/div[3]/h2/strong - Thank you!
-### //*[@id="colored"] if element is disabled positive icon
-### //*[@id="content"]/section[1]/div/div/div[2]/div/div/div/div/div/div/div/div[3]/p - We have sent your demo credentials to your email please check your email to test demo website. if message not found inbox please check spam folder text

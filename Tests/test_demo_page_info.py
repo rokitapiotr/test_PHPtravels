@@ -1,7 +1,7 @@
 import pytest
 
-from Pages.Demo_page import DemoPage
-from Pages.Demo_page_logged_succesfully import  LoggedInSuccessfullyOnDemoPage
+from test_PHPtravels.Pages.Demo_page import DemoPage
+from test_PHPtravels.Pages.Demo_page_logged_succesfully import LoggedInSuccessfullyOnDemoPage
 
 
 class TestPositiveScenarios:
@@ -17,5 +17,5 @@ class TestPositiveScenarios:
         assert demo_page_download.feedback == ('We have sent your demo credentials to your email please check your email '
                                                'to test demo website. if message not found inbox please check spam folder'), \
                                                'Feedback message should be displayed'
-        assert demo_page_download.is_circle_displayed(), "Circle should be displayed"
+        assert demo_page_download.is_picture_displayed(), "Picture should be displayed"
 
