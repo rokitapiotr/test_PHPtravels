@@ -1,6 +1,6 @@
 import pytest
-from test_PHPtravels.Pages.Login_page import LoginPage
-from test_PHPtravels.Pages.Login_positive import LoggedInSuccessfully
+from Pages.Login_page import LoginPage
+from Pages.Login_positive import LoggedInSuccessfully
 
 
 class TestPositiveLoginScenario:

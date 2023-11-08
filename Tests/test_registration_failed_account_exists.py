@@ -1,7 +1,7 @@
 import pytest
 
-from test_PHPtravels.Pages.Registration_page import RegistrationPage
-from test_PHPtravels.Pages.Registration_failed_account_exists import RegisteredUnSuccessfulOnRegistrationPageAccountExists
+from Pages.Registration_page import RegistrationPage
+from Pages.Registration_failed_account_exists import RegisteredUnSuccessfulOnRegistrationPageAccountExists
 
 
 class TestNegativeScenarioAccountExists:

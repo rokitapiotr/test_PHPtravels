@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
-from test_PHPtravels.Pages.Base_page import BasePage
+from Pages.Base_page import BasePage
 
 
 class LoginPage(BasePage):

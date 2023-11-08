@@ -1,6 +1,6 @@
 import pytest
-from test_PHPtravels.Pages.Login_page import LoginPage
-from test_PHPtravels.Pages.Login_negative import LoggedInUnsuccessfully
+from Pages.Login_page import LoginPage
+from Pages.Login_negative import LoggedInUnsuccessfully
 
 
 class TestNegativeLoginScenario:
