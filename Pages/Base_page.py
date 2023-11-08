@@ -1,6 +1,5 @@
 import os
 import sys
-
 from selenium.common import NoSuchElementException
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -17,32 +16,32 @@ class BasePage:
     def _find(self, locator: tuple) -> WebElement:
         return self._driver.find_element(*locator)
 
-    def _type(self, locator: tuple, text: str, time: int = 10):
+    def _type(self, locator: tuple, text: str, time: int = 15):
         self._wait_until_element_is_visible(locator, time)
         self._find(locator).send_keys(text)
 
-    def _clear(self, locator: tuple, time: int = 10):
+    def _clear(self, locator: tuple, time: int = 15):
         self._wait_until_element_is_visible(locator, time)
         self._find(locator).clear()
 
-    def _click(self, locator: tuple, time: int = 10):
+    def _click(self, locator: tuple, time: int = 15):
         self._wait_until_element_is_visible(locator, time)
         self._find(locator).click()
 
-    def _wait_until_element_is_visible(self, locator: tuple, time: int = 10):
+    def _wait_until_element_is_visible(self, locator: tuple, time: int = 15):
         wait = WebDriverWait(self._driver, time)
         wait.until(ec.visibility_of_element_located(locator))
 
-    def _wait_until_element_is_clickable(self, locator: tuple, time: int = 10):
+    def _wait_until_element_is_clickable(self, locator: tuple, time: int = 15):
         wait = WebDriverWait(self._driver, time)
         wait.until(ec.element_to_be_clickable(locator))
 
-    def _select_by_value(self, locator: tuple, value: str, time: int = 10):
+    def _select_by_value(self, locator: tuple, value: str, time: int = 15):
         self._wait_until_element_is_visible(locator, time)
         select = Select(self._find(locator))
         select.select_by_value(value)
 
-    def _select_div_by_value(self, locator: tuple, country_code: str, time: int = 10):
+    def _select_div_by_value(self, locator: tuple, country_code: str, time: int = 15):
         self._wait_until_element_is_visible(locator, time)
         div_element = self._find(locator)
         div_element.click()
@@ -67,7 +66,7 @@ class BasePage:
     def _open_url(self, url: str):
         self._driver.get(url)
 
-    def _get_text(self, locator: tuple, time: int = 10) -> str:
+    def _get_text(self, locator: tuple, time: int = 15) -> str:
         self._wait_until_element_is_visible(locator, time)
         return self._find(locator).text
 

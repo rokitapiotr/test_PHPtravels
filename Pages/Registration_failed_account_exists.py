@@ -18,4 +18,4 @@ class RegisteredUnSuccessfulOnRegistrationPageAccountExists(BasePage):
 
     @property
     def header(self) -> str:
-        return super()._get_text(self.__header_locator)
+        return self._get_text(self.__header_locator)

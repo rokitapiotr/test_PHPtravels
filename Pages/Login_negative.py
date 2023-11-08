@@ -1,6 +1,5 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-
 from test_PHPtravels.Pages.Base_page import BasePage
 
 
@@ -18,4 +17,4 @@ class LoggedInUnsuccessfully(BasePage):
 
     @property
     def feedback(self) -> str:
-        return super()._get_text(self.__feedback_locator)
+        return self._get_text(self.__feedback_locator)

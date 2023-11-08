@@ -18,8 +18,8 @@ class RegisteredInSuccessfullyOnRegistrationPage(BasePage):
 
     @property
     def header(self) -> str:
-        return super()._get_text(self.__header_locator)
+        return self._get_text(self.__header_locator)
 
     @property
     def error_message(self) -> str:
-        return super()._get_text(self.__error_of_resending_email_message_locator)
+        return self._get_text(self.__error_of_resending_email_message_locator)

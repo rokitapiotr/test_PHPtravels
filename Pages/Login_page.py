@@ -14,13 +14,13 @@ class LoginPage(BasePage):
         super().__init__(driver)
 
     def open(self):
-        super()._open_url(self._url)
+        self._open_url(self._url)
 
     def login(self, email, password):
-        super()._type(self.__email_input, email)
-        super()._type(self.__password_input, password)
+        self._type(self.__email_input, email)
+        self._type(self.__password_input, password)
 
     def captcha(self, site_key: str, url_str: str):
         captcha_token = self._resolve_captcha(site_key, url_str)
-        super()._set_captcha_response(captcha_token)
-        super()._click(self.__login_button)
+        self._set_captcha_response(captcha_token)
+        self._click(self.__login_button)

@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
-
-
-from Pages.Base_page import BasePage
+from test_PHPtravels.Pages.Base_page import BasePage
 
 
 class DemoPage(BasePage):
@@ -21,18 +19,18 @@ class DemoPage(BasePage):
         super().__init__(driver)
 
     def open(self):
-        super()._open_url(self.__url)
+        self._open_url(self.__url)
 
     def execute_demonstration_version(self, first_name, last_name, business_name, email):
-        super()._type(self.__first_name, first_name)
-        super()._type(self.__last_name, last_name)
-        super()._type(self.__business_name, business_name)
-        super()._type(self.__email, email)
+        self._type(self.__first_name, first_name)
+        self._type(self.__last_name, last_name)
+        self._type(self.__business_name, business_name)
+        self._type(self.__email, email)
 
         number1 = int(super()._get_text(self.__number1))
         number2 = int(super()._get_text(self.__number2))
 
         sum_of_numbers = number1 + number2
 
-        super()._type(self.__insert_number, str(sum_of_numbers))
-        super()._click(self.__demo_button)
+        self._type(self.__insert_number, str(sum_of_numbers))
+        self._click(self.__demo_button)

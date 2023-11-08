@@ -32,7 +32,7 @@ class RegistrationPage(BasePage):
         super().__init__(driver)
 
     def open(self):
-        super()._open_url(self.__url)
+        self._open_url(self.__url)
 
     def fill_all_personal_information(self,
                                       first_name: str,
@@ -40,11 +40,11 @@ class RegistrationPage(BasePage):
                                       email: str,
                                       phone_number: str,
                                       country_code: str):
-        super()._type(self.__first_name, first_name)
-        super()._type(self.__last_name, last_name)
-        super()._type(self.__email, email)
-        super()._type(self.__phone_number, phone_number)
-        super()._select_div_by_value(self.__select_country_code, country_code)
+        self._type(self.__first_name, first_name)
+        self._type(self.__last_name, last_name)
+        self._type(self.__email, email)
+        self._type(self.__phone_number, phone_number)
+        self._select_div_by_value(self.__select_country_code, country_code)
 
     def fill_all_billing_address(self,
                                  company_name: str,
@@ -54,27 +54,27 @@ class RegistrationPage(BasePage):
                                  state: str,
                                  post_code: str,
                                  country: str):
-        super()._type(self.__company_name, company_name)
-        super()._type(self.__address_1, street_address)
-        super()._type(self.__address_2, street_address_2)
-        super()._type(self.__city, city)
-        super()._type(self.__state, state)
-        super()._type(self.__post_code, post_code)
-        super()._select_by_value(self.__select_country, country)
+        self._type(self.__company_name, company_name)
+        self._type(self.__address_1, street_address)
+        self._type(self.__address_2, street_address_2)
+        self._type(self.__city, city)
+        self._type(self.__state, state)
+        self._type(self.__post_code, post_code)
+        self._select_by_value(self.__select_country, country)
 
     def fill_additional_required_information(self, phone_number: str):
-        super()._type(self.__phone_number_2, phone_number)
+        self._type(self.__phone_number_2, phone_number)
 
     def password_generator(self, length_of_password: str):
-        super()._click(self.__password_generator_button)
-        super()._type(self.__password_length_input, length_of_password)
-        super()._click(self.__generation_new_password_button)
-        super()._click(self.__copy_and_insert_password_button)
+        self._click(self.__password_generator_button)
+        self._type(self.__password_length_input, length_of_password)
+        self._click(self.__generation_new_password_button)
+        self._click(self.__copy_and_insert_password_button)
 
     def not_accepting_email_newsletter(self):
-        super()._click(self.__newsletter_rejection)
+        self._click(self.__newsletter_rejection)
 
     def captcha(self, site_key: str, url_str: str):
         captcha_token = self._resolve_captcha(site_key, url_str)
-        super()._set_captcha_response(captcha_token)
-        super()._click(self.__register_button)
+        self._set_captcha_response(captcha_token)
+        self._click(self.__register_button)
