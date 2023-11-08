@@ -4,6 +4,7 @@ from Pages.Base_page import BasePage
 
 
 class RegistrationPage(BasePage):
+
     __url = "https://phptravels.org/register.php"
     __first_name = (By.ID, "inputFirstName")
     __last_name = (By.ID, "inputLastName")

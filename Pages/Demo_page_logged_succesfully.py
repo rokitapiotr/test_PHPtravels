@@ -4,9 +4,10 @@ from Pages.Base_page import BasePage
 
 
 class LoggedInSuccessfullyOnDemoPage(BasePage):
-    __header_locator = (By.CLASS_NAME, 'text-start fs-4')
+
+    __header_locator = (By.XPATH, '//*[@id="swup"]/section[1]/div/div/div[1]/div/div/div/div/h2')
     __picture_locator = (By.XPATH, '//*[@id="colored"]')
-    __feedback_locator = (By.CLASS_NAME, 'text-center cw')
+    __feedback_locator = (By.XPATH, '//*[@id="swup"]/section[1]/div/div/div[1]/div/div/div/div/div/div/div/div[3]/p')
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)

@@ -10,6 +10,7 @@ from twocaptcha import TwoCaptcha
 
 
 class BasePage:
+
     def __init__(self, driver: WebDriver):
         self._driver = driver
 
@@ -50,6 +51,7 @@ class BasePage:
         var divElement = arguments[0];
         divElement.textContent = '{country_code}';
         """
+
         self._driver.execute_script(script, div_element)
         div_element.click()
 
