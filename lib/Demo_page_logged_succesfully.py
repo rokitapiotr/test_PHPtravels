@@ -22,4 +22,3 @@ class LoggedInSuccessfullyOnDemoPage(BasePage):
 
     def is_picture_displayed(self) -> bool:
         return self._is_displayed(self.__picture_locator)
-

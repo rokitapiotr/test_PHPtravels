@@ -1,6 +1,7 @@
 import pytest
 from lib.Demo_page import DemoPage
 from lib.Demo_page_logged_succesfully import LoggedInSuccessfullyOnDemoPage
+from conftest import driver
 
 
 class TestPositiveScenarios:

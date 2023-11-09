@@ -1,7 +1,7 @@
 import pytest
-
 from lib.Registration_page import RegistrationPage
 from lib.Registration_page_succesfull import RegisteredInSuccessfullyOnRegistrationPage
+from conftest import driver
 
 
 class TestPositiveScenariosForRegistrationPage:

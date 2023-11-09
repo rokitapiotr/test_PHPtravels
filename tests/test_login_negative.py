@@ -1,6 +1,7 @@
 import pytest
 from lib.Login_page import LoginPage
 from lib.Login_negative import LoggedInUnsuccessfully
+from conftest import driver
 
 
 class TestNegativeLoginScenario:

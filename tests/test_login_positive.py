@@ -1,6 +1,7 @@
 import pytest
 from lib.Login_page import LoginPage
 from lib.Login_positive import LoggedInSuccessfully
+from conftest import driver
 
 
 class TestPositiveLoginScenario:
