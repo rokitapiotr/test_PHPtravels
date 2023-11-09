@@ -5,3 +5,6 @@
 
 /cache/
 /temp/
+
+__pycache__/
+*.pyc

@@ -1,6 +1,6 @@
 import pytest
-from Pages.Login_page import LoginPage
-from Pages.Login_negative import LoggedInUnsuccessfully
+from lib.Login_page import LoginPage
+from lib.Login_negative import LoggedInUnsuccessfully
 
 
 class TestNegativeLoginScenario:

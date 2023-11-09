@@ -1,7 +1,7 @@
 import pytest
 
-from Pages.Registration_page import RegistrationPage
-from Pages.Registration_page_succesfull import RegisteredInSuccessfullyOnRegistrationPage
+from lib.Registration_page import RegistrationPage
+from lib.Registration_page_succesfull import RegisteredInSuccessfullyOnRegistrationPage
 
 
 class TestPositiveScenariosForRegistrationPage:

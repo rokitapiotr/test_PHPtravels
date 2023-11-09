@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
-from Pages.Base_page import BasePage
+from lib.Base_page import BasePage
 
 
 class DemoPage(BasePage):

@@ -1,6 +1,6 @@
 import pytest
-from Pages.Login_page import LoginPage
-from Pages.Login_positive import LoggedInSuccessfully
+from lib.Login_page import LoginPage
+from lib.Login_positive import LoggedInSuccessfully
 
 
 class TestPositiveLoginScenario:
