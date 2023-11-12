@@ -1,10 +1,9 @@
 import pytest
-from lib.Login_page import LoginPage
-from lib.Login_negative import LoggedInUnsuccessfully
+from lib.Login_page import LoginPage, LoggedInUnsuccessfully
 from conftest import driver
 
 test_data = [
-    ('testmail@gmai.com', 'NogaRekaPlecy12'),
+    ('testmail@gmai.com', 'NogaRekaPlecy12')
 ]
 
 

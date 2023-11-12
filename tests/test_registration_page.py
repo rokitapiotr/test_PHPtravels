@@ -1,11 +1,10 @@
 import pytest
-from lib.Registration_page import RegistrationPage
-from lib.Registration_page_succesfull import RegisteredInSuccessfullyOnRegistrationPage
+from lib.Registration_page import RegistrationPage, RegisteredInSuccessfullyOnRegistrationPage
 from conftest import driver
 
 
 test_data = [
-    ('John', 'Doe', 'dupa112349807@onet.pl', '123456789', '+48'),
+    ('John', 'Doe', 'dupa112349807@onet.pl', '123456789', '+48')
 ]
 
 

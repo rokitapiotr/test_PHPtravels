@@ -1,6 +1,5 @@
 import pytest
-from lib.Registration_page import RegistrationPage
-from lib.Registration_failed_account_exists import RegisteredUnsuccessfulOnRegistrationPageAccountExists
+from lib.Registration_page import RegistrationPage, RegisteredUnsuccessfulOnRegistrationPageAccountExists
 from conftest import driver
 
 

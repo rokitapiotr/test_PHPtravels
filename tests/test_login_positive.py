@@ -1,6 +1,5 @@
 import pytest
-from lib.Login_page import LoginPage
-from lib.Login_positive import LoggedInSuccessfully
+from lib.Login_page import LoginPage, LoggedInSuccessfully
 from conftest import driver
 
 test_data = [

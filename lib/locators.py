@@ -70,7 +70,7 @@ class RegistrationPageLocators:
     register_button = (By.XPATH, '//*[@id="frmCheckout"]/p/input')
 
 
-class RegisteredUnsuccessfulOnRegistrationPageAccountExists:
+class RegisteredSuccessfulOnRegistrationPageAccountExistsLocators:
 
     url = 'https://phptravels.org/clientarea.php'
     header_locator = (By.XPATH, '/html/body/nav/div/ol/li[2]')
